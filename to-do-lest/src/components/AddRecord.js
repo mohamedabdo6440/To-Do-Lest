@@ -22,6 +22,8 @@ const AddRecord = ({ addNewRecord, close }) => {
         }
     }
 
+
+
     const handelData = () => {
         //function add new record in Home Component
         addNewRecord(DataFromUserForm.NewEmployee)
@@ -37,19 +39,24 @@ const AddRecord = ({ addNewRecord, close }) => {
     }
 
     return (
-        <div>
+        <div className=''>
             <form onSubmit={(e) => e.preventDefault()}>
                 <label htmlFor="name" className="form-label">Full Name</label>
-                <input className="form-control" type="text" id="name" value={name} onChange={(e) => { setName(e.target.value) }} />
+                <input className="form-control" type="text" id="name" value={name} onChange={(e) => { setName(e.target.value) }} required />
+                <hr />
                 <label htmlFor="job" className="form-label">Job Description</label>
-                <input className="form-control" type="text" id="job" value={job} onChange={(e) => { setJob(e.target.value) }} />
+                <input className="form-control" type="text" id="job" value={job} onChange={(e) => { setJob(e.target.value) }} required />
+                <hr />
                 <label htmlFor="age" className="form-label">Age</label>
-                <input className="form-control" type="number" id="age" value={age} onChange={(e) => { setAge(e.target.value) }} />
+                <input className="form-control" type="number" id="age" value={age} onChange={(e) => { setAge(e.target.value) }} required />
+                <hr />
                 <label htmlFor="phone" className="form-label">Phone Number</label>
-                <input className="form-control" type="text" id="phone" value={phone} onChange={(e) => { setPhone(e.target.value) }} />
+                <input className="form-control" type="text" id="phone" value={phone} onChange={(e) => { setPhone(e.target.value) }} required />
+                <hr />
                 <GetPhoto image={image} setImage={setImage} />
+                <hr />
                 <div className='d-flex justify-content-evenly'>
-                    <Button styleButt={'btn btn-primary mt-3'} children={"Save"} onClickButt={handelData} />
+                    <Button styleButt={'btn btn-primary mt-3'} children={"Save"} type={'submit'} onClickButt={handelData} />
                     <Button styleButt={'btn btn-primary mt-3'} children={"Reset"} type={'reset'} />
                 </div>
             </form>

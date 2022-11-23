@@ -12,7 +12,7 @@
     width: 50%;
     height: auto;
     position: fixed;
-    top: 0;
+    top: -157px;
     z-index: 1500;
     transform: translate(50%, 25%);
     border-radius: 25px;
