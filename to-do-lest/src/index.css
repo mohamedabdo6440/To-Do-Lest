@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.ToDolist {
+    background-color: #ffc107;
+    color: rgb(80, 78, 78);
+    border-radius: 20px;
+
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
